@@ -332,15 +332,7 @@ function isEven(num){
 }
 console.log(isEven(5))
 
-//(48) zadanie sql-ex.ru 
 
-SELECT class 
-FROM classes  LEFT JOIN Outcomes  ON outcomes.ship = classes.class
-WHERE result = 'sunk'
-UNION
-SELECT class
-FROM Ships LEFT JOIN Outcomes ON Outcomes.ship = ships.name
-WHERE result = 'sunk'
 
 //Use object property shorthand with object literals to create and return an object with name, age and gender properties.
 
