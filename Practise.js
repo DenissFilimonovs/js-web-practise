@@ -357,8 +357,165 @@ function getDivisors(num){
 
 }
 console.log(getDivisors(300)) 
-*/
+
 
  //var_text_hello na vartexthello
 let string = 'var_text_hello'
 console.log(string.replace(/_/g,' '))
+
+
+function ucfirst(str) {
+    return str[0].toUpperCase() + str.substr(1)
+}
+
+let str = 'var_text_hello'
+let res = []
+
+let newArr = str.split('_')
+res.push(newArr[0])
+
+
+for(let i = 1;i<newArr.length;i++){
+    let newStr = ucfirst(newArr[i])
+    res.push(newStr)
+}
+
+let final = res.join('')
+console.log(final)
+*/
+
+// СТРИНГ В МАССИВ
+let str = 'Kazdij ohotnik zelaet znatj'
+let array = str.split(' ')
+console.log(array)
+
+
+ 
+
+
+//1)Сделайте функцию isNumberInRange, которая параметром принимает число и проверяет, что оно больше нуля и меньше 10. Если это так - пусть функция возвращает true, если не так - false.
+
+
+function isNumberInRange(num){
+    return num>0 && num<10
+}
+console.log(isNumberInRange(11))
+
+
+//2) Дан массив с числами. Запишите в новый массив только те числа, которые больше нуля и меньше 10-ти. Для этого используйте вспомогательную функцию isNumberInRange из предыдущей задачи.
+
+
+let myArray = [1,3,5,11]
+let newArray = []
+
+for(let i = 0;i<myArray.length;i++){
+    if(isNumberInRange(myArray[i])){
+        newArray.push(myArray[i])
+    }
+}
+
+function isNumberInRange(num){
+    return num>0 && num<10
+}
+console.log(newArray)
+
+
+
+//3)Сделайте функцию getDigitsSum (digit - это цифра), которая параметром принимает целое число и возвращает сумму его цифр.
+
+function getDigitsSum(num){
+    return String(num).split('')
+}
+
+function arraySum(arr){
+    let sum = 0
+    for(let i = 0;i<arr.length;i++){
+        sum+=Number(arr[i])
+    }
+    return sum
+}
+let sum = arraySum(getDigitsSum(123))
+console.log(sum)
+
+
+//4)Сделайте функцию isEven() (even - это четный), которая параметром принимает целое число и проверяет: четное оно или нет. Если четное - пусть функция возвращает true, если нечетное - false.
+
+function isEven(num){
+    return num %2==0;
+}
+console.log(isEven(10))
+
+
+
+//5)Сделайте функцию getDivisors, которая параметром принимает число и возвращает массив его делителей
+    // (чисел, на которое делится данное число).
+   
+function getDivisors(num){
+    let result = []
+    for(let i = 1;i<num;i++){
+        if(num %i==0){
+            result.push(i)
+        }
+    }
+    return result
+}
+
+console.log(getDivisors(1234))
+
+
+ 
+
+//6)Дана строка. Сделайте заглавным первый символ каждого слова этой строки. Для этого сделайте вспомогательную функцию ucfirst, которая будет получать строку, делать первый символ этой строки заглавным и возвращать обратно строку с заглавной первой буквой.
+
+let str = 'You know so'
+let res = []
+let arr = str.split(' ')
+
+for(let i = 0;i<arr.length;i++){
+    res.push(ucfirst(arr[i]))
+}
+
+let newStr = res.join(' ')
+console.log(res)
+console.log(newStr)
+
+function ucfirst(word){
+    return word[0].toUpperCase() + word.substr(1)
+}
+
+
+// 7)Сделайте функцию inArray, которая определяет, есть в массиве элемент с заданным текстом или нет. Функция первым параметром должна принимать текст элемента, а вторым - массив, в котором делается поиск. Функция должна возвращать true или false.
+/*
+function inArray(value,arr){
+    for(let i = 0;i<arr.length;i++){
+        if(arr[i]==value){
+            return true
+        }
+    }
+    return false
+}
+let mas = [1,2,3,4,5,6]
+console.log(inArray(5,mas))
+*/
+
+//REKURSIJA 
+
+/*
+var num = 900;
+function isSumLess(num) {
+    if (num === 0) 
+    return 0;
+    return (num - 1) % 9 + 1;
+}
+
+console.log('Конечное число = ', isSumLess(num));
+*/
+/*
+let lox = {
+     a: 'aaa',
+     b: 'bbb'
+}
+
+let result = JSON.stringify(lox)
+console.log(result)
+*/
