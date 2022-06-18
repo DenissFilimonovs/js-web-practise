@@ -342,3 +342,11 @@ SELECT class
 FROM Ships LEFT JOIN Outcomes ON Outcomes.ship = ships.name
 WHERE result = 'sunk'
 
+//Use object property shorthand with object literals to create and return an object with name, age and gender properties.
+
+const createPerson = (name, age, gender) => {
+    // Only change code below this line
+    return ({name,age,gender
+    });
+    // Only change code above this line
+  };
