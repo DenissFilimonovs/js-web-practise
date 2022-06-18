@@ -485,7 +485,7 @@ function ucfirst(word){
 
 
 // 7)Сделайте функцию inArray, которая определяет, есть в массиве элемент с заданным текстом или нет. Функция первым параметром должна принимать текст элемента, а вторым - массив, в котором делается поиск. Функция должна возвращать true или false.
-/*
+
 function inArray(value,arr){
     for(let i = 0;i<arr.length;i++){
         if(arr[i]==value){
@@ -496,11 +496,11 @@ function inArray(value,arr){
 }
 let mas = [1,2,3,4,5,6]
 console.log(inArray(5,mas))
-*/
+
 
 //REKURSIJA 
 
-/*
+
 var num = 900;
 function isSumLess(num) {
     if (num === 0) 
@@ -509,8 +509,8 @@ function isSumLess(num) {
 }
 
 console.log('Конечное число = ', isSumLess(num));
-*/
-/*
+
+//STRINGIFY
 let lox = {
      a: 'aaa',
      b: 'bbb'
