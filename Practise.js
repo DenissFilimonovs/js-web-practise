@@ -342,3 +342,23 @@ const createPerson = (name, age, gender) => {
     });
     // Only change code above this line
   };
+
+
+
+ //SLOZNO
+function getDivisors(num){
+    let result = []
+    for(let i = 1;i<num;i++){
+        if(num % i == 0){
+            result.push(i)
+        }
+    }
+    return result
+
+}
+console.log(getDivisors(300)) 
+*/
+
+ //var_text_hello na vartexthello
+let string = 'var_text_hello'
+console.log(string.replace(/_/g,' '))
