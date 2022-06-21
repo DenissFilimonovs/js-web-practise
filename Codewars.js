@@ -73,3 +73,8 @@ function powersOfTwo(n){
   }
   return result
 }
+
+//Twice as old
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  return Math.abs(dadYearsOld - 2 * sonYearsOld);
+}
