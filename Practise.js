@@ -510,3 +510,14 @@ function isSumLess(num) {
 
 console.log('Конечное число = ', isSumLess(num));
 
+
+// Promise
+let promise = new Promise(function(resolve){
+	setTimeout(function(){
+		resolve(['Kak dela djadja?'])
+	},3000)
+})
+
+promise.then(function(result){
+	console.log(result)
+})
