@@ -1,2 +1,2 @@
 # Hello-JS
-JS LEARNING
+Every day 
