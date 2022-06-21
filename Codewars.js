@@ -78,3 +78,8 @@ function powersOfTwo(n){
 function twiceAsOld(dadYearsOld, sonYearsOld) {
   return Math.abs(dadYearsOld - 2 * sonYearsOld);
 }
+
+//Is the string uppercase?
+String.prototype.isUpperCase = function() {
+  return this == this.toUpperCase()
+ }
