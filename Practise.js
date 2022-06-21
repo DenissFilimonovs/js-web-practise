@@ -510,11 +510,3 @@ function isSumLess(num) {
 
 console.log('Конечное число = ', isSumLess(num));
 
-//STRINGIFY
-let lox = {
-     a: 'aaa',
-     b: 'bbb'
-}
-
-let result = JSON.stringify(lox)
-console.log(result)
