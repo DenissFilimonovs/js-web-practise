@@ -521,3 +521,41 @@ let promise = new Promise(function(resolve){
 promise.then(function(result){
 	console.log(result)
 })
+
+
+//Promis random 4islo s rekursijej 
+
+let promise = new Promise((resolve,reject)=>{
+    let i = 0;
+    start();
+
+    function start(){
+        let interval = getRandomInt(1, 5);
+        
+        setTimeout(() => {
+            i++;
+            console.log(i,interval);
+
+            if(interval==2){
+                resolve('result')
+            }else if(i>=3){      
+                reject('error')
+            }else{
+                start()
+            }
+        },interval * 500)
+    }
+
+})
+
+promise.then(
+    (result)=>{alert('result')},
+    (error) => {alert('error')}
+)
+console.log('!')
+
+
+
+function getRandomInt(min,max){
+    return Math.floor(Math.random()*(max-min+1)) + min;
+}
