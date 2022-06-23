@@ -559,3 +559,15 @@ console.log('!')
 function getRandomInt(min,max){
     return Math.floor(Math.random()*(max-min+1)) + min;
 }
+
+
+// С помощью рекурсии выведите элементы этого массива на экран.
+
+function func(arr){
+    console.log(arr.shift())
+    if(arr.length !=0){ 
+        func(arr)
+    }
+}
+
+func([1,2,3,4,5])
