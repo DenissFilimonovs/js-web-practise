@@ -570,4 +570,17 @@ function func(arr){
     }
 }
 
-func([1,2,3,4,5])
+func([1,2,3,4,5]) // 1,2,3,4,5
+
+//Найти сумму элементов массива с помощью рекурсии
+
+function func(arr , sum){
+    sum += arr.shift();
+
+    if(arr.length !=0){
+        sum = func(arr,sum)
+    }
+    return sum
+}
+
+console.log(func([1,2,3,4,5],0)) //15
