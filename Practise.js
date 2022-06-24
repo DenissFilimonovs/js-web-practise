@@ -584,3 +584,19 @@ function func(arr , sum){
 }
 
 console.log(func([1,2,3,4,5],0)) //15
+
+//Напишите код, который развернет наш многомерный массив в одномерный. Для приведенного выше массива это будет выглядеть вот так:
+
+let arr = [1,[2,7,8],[3,4],[5,[6,7]]]
+console.log(func(arr)) 
+function func(arr){
+    let result = [];
+    for(let elem of arr){
+        if(typeof elem == 'object'){
+            result = result.concat(func(elem))
+        }else{
+            result.push(elem)
+        }
+    }
+return result // [1, 2, 7, 8, 3, 4, 5, 6, 7]
+}
