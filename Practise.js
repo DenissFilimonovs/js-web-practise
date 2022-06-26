@@ -608,3 +608,16 @@ for(let elem of arr){
     sum +=elem
     console.log(sum)
 }
+
+//Дан массив со строками. Используя метод map в конец значению каждого элемента массива добавьте символ '!'.
+
+let arr = ['privet', 'muzik', 'rodnoj']
+
+let result = arr.map(function(elem){
+
+    return elem + '!'
+    
+})
+
+console.log(result) // [ 'privet!', 'muzik!', 'rodnoj!' ]
+
