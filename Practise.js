@@ -621,3 +621,17 @@ let result = arr.map(function(elem){
 
 console.log(result) // [ 'privet!', 'muzik!', 'rodnoj!' ]
 
+
+//Используя метод map преобразуйте этот массив в следующий:
+
+/*let arr = [
+	[1, 2, 3],
+	[4, 5, 6],
+	[7, 8, 9]
+];*/
+
+
+let arr = ['123','456','789'];
+
+let result = arr.map(elem=>elem.split('').map(Number))
+console.log(result)
