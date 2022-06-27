@@ -651,5 +651,20 @@ let arr = [
     }),
 ]
 
-Promise.all(arr).then(results => alert(results))
+Promise.all(arr).then(results => alert(results)) // 4,9
+
+//PROMISE ALL + MAP
+
+function heavyOperation(num){
+    return new Promise(function(resolve,reject){
+        setTimeout(()=>{
+            resolve (num * num);
+        },1000);
+    })
+}
+
+let nums = [4,3,2]
+
+Promise.all( nums.map(heavyOperation) )
+    .then(results=>alert(results)); // 16,9,4
 
