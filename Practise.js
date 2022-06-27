@@ -668,3 +668,22 @@ let nums = [4,3,2]
 Promise.all( nums.map(heavyOperation) )
     .then(results=>alert(results)); // 16,9,4
 
+//PROMISE ALL + MAP + CATCH
+  function heavyOperation(num) {
+        return new Promise(function(resolve,reject){
+            setTimeout(()=>{
+                if(num!=0){
+                    resolve (num*num)
+                }else{
+                    reject('error')
+                };
+            },2000)
+        })
+    }
+
+    let nums = [1,0,3];
+
+    Promise.all(nums.map(heavyOperation))
+    .then (result => alert(result))
+    .catch (error => alert(error)) //error
+
