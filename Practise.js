@@ -635,3 +635,21 @@ let arr = ['123','456','789'];
 
 let result = arr.map(elem=>elem.split('').map(Number))
 console.log(result)
+
+//Promise ALL
+
+let arr = [
+    new Promise  (function(resolve,reject){
+        setTimeout(()=>{
+            resolve (2 * 2);
+        },1000);
+    }),
+    new Promise  (function(resolve,reject){
+        setTimeout(()=>{
+            resolve (3 * 3);
+        },2000)
+    }),
+]
+
+Promise.all(arr).then(results => alert(results))
+
