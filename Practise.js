@@ -687,3 +687,6 @@ Promise.all( nums.map(heavyOperation) )
     .then (result => alert(result))
     .catch (error => alert(error)) //error
 
+
+
+
