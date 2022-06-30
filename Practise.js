@@ -687,6 +687,61 @@ Promise.all( nums.map(heavyOperation) )
     .then (result => alert(result))
     .catch (error => alert(error)) //error
 
+// GETERS AND SETTERS
+
+class Worker{
+   constructor(name, surname, rate, days){
+    this.name = name;
+    this.surname = surname;
+    this.rate = rate;
+    this.days = days;
+   }
+
+    setName(name){
+        this.name = name;
+    }
+
+    getName(){
+        return this.name;
+    }
+
+    setSurname(surname){
+        this.surname = surname;
+    }
+    getSurname(){
+        return this.surname;
+    }
+
+    setRate(rate){
+        this.rate = rate;
+    }
+
+    getRate(rate){
+        return  this.rate;
+    }
+
+    setDays(days){
+        this.days=days;
+    }
+
+    getDays(){
+        return this.days;
+    }
+    getSalary() {
+        return this.rate * this.days
+    }
+
+}
+let worker = new Worker('Anton', 'Mihalko', 10, 31);
+
+
+console.log(worker.getRate()); //выведет 10
+console.log(worker.getDays()); // выведет 31
+console.log(worker.getSalary()); // выведет 310 - (10*31)
+
+worker.setRate(20); // Увеличиваем ставку
+worker.setDays(10); // Уменьшаем дни
+console.log(worker.getSalary()); // выведет 200 - (20*10)
 
 
 
