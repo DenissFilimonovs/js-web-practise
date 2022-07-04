@@ -1,2 +1,2 @@
-# Hello-JS
+# JS-Practise
 Every day 
