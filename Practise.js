@@ -778,3 +778,28 @@ console.log(student.getFullName()) // Anton Mihalko
 console.log(student.year); // 2019
 console.log(student.getCourse()); // 3
 
+
+ //ASYNC + AWAIT
+
+   function getSmth1() {
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>resolve(1),1000)
+        });
+   }
+
+   function getSmth2() {
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>resolve(2),1000)
+    });
+   }
+
+   async function func() {
+    console.log('1');
+    let result1 = await getSmth1();
+    console.log('2');
+    let result2 = await getSmth2();
+    console.log('3');
+    alert(result1+result2);
+   }
+
+   func()
