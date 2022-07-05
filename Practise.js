@@ -803,3 +803,41 @@ console.log(student.getCourse()); // 3
    }
 
    func()
+
+
+//TRY + CATCH + RESOLVE
+
+function getSmth() {
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>resolve('result'), 1000)
+    });
+}
+
+async function func(){
+    try{
+        let result = await getSmth();
+        alert(result + '!') // result!
+    }catch(error){
+        alert(error)
+    }
+}
+
+func()
+
+// POPALI V BLOK 'CATCH'
+function getSmth() {
+    return new Promise((resolve,reject) => {
+        setTimeout(()=>reject('error'),1000)
+    });
+}
+
+async function func() {
+    try{
+        let result = await getSmth()
+        alert(result)
+    }catch(error){
+        alert('error') // error
+    }
+}
+func()
+
