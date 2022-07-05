@@ -799,7 +799,7 @@ console.log(student.getCourse()); // 3
     console.log('2');
     let result2 = await getSmth2();
     console.log('3');
-    alert(result1+result2);
+    alert(result1+result2); //3
    }
 
    func()
