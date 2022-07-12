@@ -95,3 +95,12 @@ Length should be between 4 and 16 characters (both included).
 function validateUsr(username) {
   return /^[a-z0-9_]{4,16}$/g.test(username); 
 }
+
+//Merge two sorted arrays into one
+function mergeArrays(arr1, arr2) {
+  if (arr1.length == 0 && arr2.length == 0) {
+    return [];
+  } else {
+     return Array.from(new Set(arr1.concat(arr2))).sort((a,b) => a - b);   
+    }
+}
